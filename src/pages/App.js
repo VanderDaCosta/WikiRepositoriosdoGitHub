@@ -8,7 +8,7 @@ import { api } from '../services/api';
 
 import { Container } from './styles';
 
-function App() {
+function App () {
 
   const [currentRepo, setCurrentRepo] = useState('');
   const [repos, setRepos] = useState([]);
@@ -34,9 +34,7 @@ function App() {
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
-
-    // utilizar filter.
+    setRepos(repos.filter((repo) => repo.id !== id));
   }
 
 
